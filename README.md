@@ -1,2 +1,2 @@
 # indecision-app
-A small app to learn very fundamentals of react
+Add your options, let the computer guides you!
