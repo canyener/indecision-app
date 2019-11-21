@@ -2,18 +2,23 @@
 
 //JSX - JavaScript XML
 
+var app = {
+    title: 'Indecision App',
+    subtitle: 'Put your life in the hands of a computer!'
+};
+
 var template = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Indecision App'
+        app.title
     ),
     React.createElement(
         'p',
         null,
-        'This is some info'
+        app.subtitle
     ),
     React.createElement(
         'ol',
@@ -31,26 +36,31 @@ var template = React.createElement(
     )
 );
 
+var userName = 'Can Yener';
+var userAge = 35;
+var userLocation = 'Istanbul';
 var templateTwo = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Can Yener'
+        userName
     ),
     React.createElement(
         'p',
         null,
-        'Age: 35'
+        'Age: ',
+        userAge
     ),
     React.createElement(
         'p',
         null,
-        'Location: Istanbul'
+        'Location: ',
+        userLocation
     )
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
