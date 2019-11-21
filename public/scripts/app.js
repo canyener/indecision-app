@@ -14,6 +14,20 @@ var template = React.createElement(
         'p',
         null,
         'This is some info'
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Item one'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item two'
+        )
     )
 );
 var appRoot = document.getElementById('app');
