@@ -37,7 +37,7 @@ var template = React.createElement(
 );
 
 var user = {
-    name: 'Can',
+    name: 'can',
     age: 35
 };
 
@@ -58,7 +58,7 @@ var templateTwo = React.createElement(
     React.createElement(
         'h1',
         null,
-        user.name
+        user.name ? user.name : 'Anonymous'
     ),
     React.createElement(
         'p',
