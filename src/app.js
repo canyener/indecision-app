@@ -9,7 +9,8 @@ var app = {
 var template = ( 
     <div>
         <h1>{app.title}</h1> 
-        <p>{app.subtitle}</p>
+        {app.subtitle && <p>{app.subtitle}</p>}
+        <p>{(app.options && app.options.length > 0) ? 'Here are your options' : 'No options to show'}</p>
         <ol>
             <li>Item one</li>
             <li>Item two</li>
@@ -39,4 +40,4 @@ var templateTwo = (
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
