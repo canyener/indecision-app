@@ -16,17 +16,20 @@ var template = (
     </div>
 );
 
-var userName = 'Can Yener';
-var userAge = 35;
-var userLocation = 'Istanbul';
+var user = {
+    name: 'Can',
+    age: 35,
+    location: 'Istanbul'
+};
+
 var templateTwo = (
     <div>
-        <h1>{userName}</h1>
-        <p>Age: {userAge}</p>
-        <p>Location: {userLocation}</p>
+        <h1>{user.name}</h1>
+        <p>Age: {user.age}</p>
+        <p>Location: {user.location}</p>
     </div>
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
