@@ -1,27 +1,81 @@
 'use strict';
 
-var nameVar = 'Can';
-var nameVar = 'Cem';
+//JSX - JavaScript XML
 
-console.log('nameVar', nameVar);
+var app = {
+    title: 'Indecision App',
+    subtitle: 'Put your life in the hands of a computer!',
+    options: ['Option One', 'Option Two']
+};
 
-var nameLet = 'Ali';
-nameLet = 'Veli'; //valid
-//let nameLet = 'Veli'; -> Duplicate declaration!
-console.log('nameLet', nameLet);
+var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        'p',
+        null,
+        app.subtitle
+    ),
+    React.createElement(
+        'p',
+        null,
+        app.options && app.options.length > 0 ? 'Here are your options' : 'No options to show'
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'Item one'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'Item two'
+        )
+    )
+);
 
-var nameConst = 'Osman';
-//nameConst = 'Ömür'; -> const is read-only!
-//const nameConst = 'Ömür';  -> Duplicate declaration!
-console.log('nameConst', nameConst);
+var user = {
+    name: 'Can',
+    age: 33,
+    location: 'Istanbul'
+};
 
-//Block Scoping
-
-var fullName = 'Can Yener';
-
-if (fullName) {
-    var firstName = fullName.split(' ')[0];
-    console.log(firstName);
+function getLocation(location) {
+    if (location) {
+        return React.createElement(
+            'p',
+            null,
+            'Location: ',
+            location
+        );
+    }
 }
 
-console.log(firstName); //We can access if firstName is 'var', CANNOT access if it is 'let' or 'const'
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        user.name ? user.name : 'Anonymous'
+    ),
+    user.age && user.age >= 18 && React.createElement(
+        'p',
+        null,
+        'Age: ',
+        user.age
+    ),
+    getLocation(user.location)
+);
+
+var appRoot = document.getElementById('app');
+
+ReactDOM.render(template, appRoot);
