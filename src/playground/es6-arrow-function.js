@@ -34,14 +34,18 @@ const add = (a, b) => {
 const user = {
     name: 'Can',
     cities: ['Istanbul', 'Tekirdağ'],
-    printPlacesLived: function() {
-        //const that = this;
-
-        //Works with arrow function, because this keyword not bound
-        this.cities.forEach((city) =>  {
-            console.log(this.name + ' has lived in ' + city);
-        });
+    printPlacesLived() {
+        return this.cities.map((city) =>  this.name + ' has lived in ' + city);        
     }
+    //ES5 definition
+    // printPlacesLived: function() {
+    //     //const that = this;
+
+    //     //Works with arrow function, because this keyword not bound
+    //     this.cities.forEach((city) =>  {
+    //         console.log(this.name + ' has lived in ' + city);
+    //     });
+    // }
 }
 
-user.printPlacesLived();
+console.log(user.printPlacesLived());
