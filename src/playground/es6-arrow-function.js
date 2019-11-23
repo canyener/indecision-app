@@ -48,4 +48,14 @@ const user = {
     // }
 }
 
-console.log(user.printPlacesLived());
+//console.log(user.printPlacesLived());
+
+const multiplier = {
+    numbers: [1, 3, 5, 7],
+    multiplyBy: 2,
+    multiply() {
+        return this.numbers.map(number => number * this.multiplyBy)
+    }
+};
+
+console.log(multiplier.multiply());
