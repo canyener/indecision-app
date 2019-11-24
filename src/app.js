@@ -18,6 +18,15 @@ const template = (
     </div>
 );
 
+let count = 0 ;
+const templateTwo = (
+    <div>
+        <h1>Count: {count}</h1>
+        <button id="button-id" className="button">+1</button>
+    </div>
+);
+
+console.log(templateTwo);
 const appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
