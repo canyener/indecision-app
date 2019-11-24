@@ -3,8 +3,19 @@
 const app = {
     title: 'Indecision App',
     subtitle: 'Put your life in the hands of a computer!',
-    options: ['Option One', 'Option Two']
+    options: []
 }
+
+const onFormSubmit = (e) => {
+    e.preventDefault();
+
+    const option = e.target.elements.option.value;
+
+    if (option) {
+        app.options.push(option);
+        e.target.elements.option.value = '';
+    }
+};
 
 const template = ( 
     <div>
@@ -15,7 +26,7 @@ const template = (
             <li>Item one</li>
             <li>Item two</li>
         </ol>
-        <form>
+        <form onSubmit={onFormSubmit}>
             <input type="text" name="option"/>
             <button>Add Option</button>
         </form>
