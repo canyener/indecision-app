@@ -49,11 +49,13 @@ var addOne = function addOne() {
 };
 
 var minusOne = function minusOne() {
-    console.log('minusOne');
+    count--;
+    renderCounterApp();
 };
 
 var reset = function reset() {
-    console.log('reset');
+    count = 0;
+    renderCounterApp();
 };
 
 var appRoot = document.getElementById('app');
