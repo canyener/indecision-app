@@ -1,57 +1,47 @@
-//JSX - JavaScript XML
-
-const app = {
-    title: 'Indecision App',
-    subtitle: 'Put your life in the hands of a computer!',
-    options: []
-}
-
-const onFormSubmit = (e) => {
-    e.preventDefault();
-
-    const option = e.target.elements.option.value;
-
-    if (option) {
-        app.options.push(option);
-        e.target.elements.option.value = '';
-        render();
+class Header extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Indecision App</h1>
+                <h2>Put your life in the hands of a computer</h2>
+            </div>
+        )
     }
-};
-
-const onRemoveAll = () => {
-    app.options = [];
-    render();
 }
 
-const onMakeDecision = () => {
-    const randomNumber = Math.floor(Math.random() * app.options.length);
-    const option = app.options[randomNumber];
-    alert(option)
+class Action extends React.Component {
+    render() {
+        return (
+            <div>
+                <button>What should I do?</button>
+            </div>
+        )
+    }
 }
 
-const appRoot = document.getElementById('app');
+class Options extends React.Component {
+    render() {
+        return (
+            <div>Options Component here</div>
+        )
+    }
+}
 
-const render = () => {
-    const template = ( 
-        <div>
-            <h1>{app.title}</h1> 
-            {app.subtitle && <p>{app.subtitle}</p>}
-            <p>{(app.options && app.options.length > 0) ? 'Here are your options' : 'No options to show'}</p>
-            <button disabled= {app.options.length === 0} onClick={onMakeDecision}>What should I do?</button>
-            <button onClick={onRemoveAll}>Remove All</button>
-            <ol>
-            {
-                app.options.map(option => <li key={option}>{option}</li>)
-            }
-            </ol>
-            <form onSubmit={onFormSubmit}>
-                <input type="text" name="option"/>
-                <button>Add Option</button>
-            </form>
-        </div>
-    );
+class AddOption extends React.Component {
+    render() {
+        return (
+            <div>Add Option Component here</div>
+        )
+    }
+}
 
-    ReactDOM.render(template, appRoot);
-};
+const jsx = (
+    <div>
+        <Header/>
+        <Action/>
+        <Options/>
+        <AddOption/>
+    </div>
+)
 
-render();
+ReactDOM.render(jsx, document.getElementById('app'))
