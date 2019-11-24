@@ -58,29 +58,16 @@ var render = function render() {
             { onClick: onRemoveAll },
             'Remove All'
         ),
-
-        // [<p key="1">a</p>, <p key="2">b</p>, <p key="3">c</p>]
-        numbers.map(function (number) {
-            return React.createElement(
-                'p',
-                { key: number },
-                'Number: ',
-                number
-            );
-        }),
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'Item one'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'Item two'
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',
