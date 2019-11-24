@@ -12,10 +12,23 @@ class Person {
     }
 }
 
-const me = new Person('Can Yener', 35)
-console.log(me.getGreeting())
-console.log(me.getDescription())
+class Student extends Person {
+    constructor(name, age, major) {
+        super(name, age)
+        this.major = major
+    }
+}
 
-const other = new Person()
-console.log(other.getGreeting())
-console.log(other.getDescription())
+// const me = new Person('Can Yener', 35)
+// console.log(me.getGreeting())
+// console.log(me.getDescription())
+
+// const other = new Person()
+// console.log(other.getGreeting())
+// console.log(other.getDescription())
+
+const me = new Student('Can Yener', 35, 'Computer Science')
+console.log(me)
+
+const other = new Student()
+console.log(other)
