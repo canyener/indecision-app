@@ -39,6 +39,16 @@ var template = React.createElement(
             null,
             'Item two'
         )
+    ),
+    React.createElement(
+        'form',
+        null,
+        React.createElement('input', { type: 'text', name: 'option' }),
+        React.createElement(
+            'button',
+            null,
+            'Add Option'
+        )
     )
 );
 
