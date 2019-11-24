@@ -47,11 +47,6 @@ var render = function render() {
             app.options && app.options.length > 0 ? 'Here are your options' : 'No options to show'
         ),
         React.createElement(
-            'p',
-            null,
-            app.options.length
-        ),
-        React.createElement(
             'button',
             { onClick: onRemoveAll },
             'Remove All'

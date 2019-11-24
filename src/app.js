@@ -31,7 +31,6 @@ const render = () => {
             <h1>{app.title}</h1> 
             {app.subtitle && <p>{app.subtitle}</p>}
             <p>{(app.options && app.options.length > 0) ? 'Here are your options' : 'No options to show'}</p>
-            <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All</button>
             <ol>
             {
