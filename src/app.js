@@ -27,6 +27,7 @@ const render = () => {
             {app.subtitle && <p>{app.subtitle}</p>}
             <p>{(app.options && app.options.length > 0) ? 'Here are your options' : 'No options to show'}</p>
             <p>{app.options.length}</p>
+            <button>Remove All</button>
             <ol>
                 <li>Item one</li>
                 <li>Item two</li>

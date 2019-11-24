@@ -47,6 +47,11 @@ var render = function render() {
             app.options.length
         ),
         React.createElement(
+            'button',
+            null,
+            'Remove All'
+        ),
+        React.createElement(
             'ol',
             null,
             React.createElement(
