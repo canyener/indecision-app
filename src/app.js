@@ -33,6 +33,9 @@ const render = () => {
             <p>{(app.options && app.options.length > 0) ? 'Here are your options' : 'No options to show'}</p>
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All</button>
+            {
+                [<p key="1">a</p>, <p key="2">b</p>, <p key="3">c</p>]
+            }
             <ol>
                 <li>Item one</li>
                 <li>Item two</li>
