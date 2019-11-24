@@ -38,6 +38,11 @@ var template = React.createElement(
         app.options && app.options.length > 0 ? 'Here are your options' : 'No options to show'
     ),
     React.createElement(
+        'p',
+        null,
+        app.options.length
+    ),
+    React.createElement(
         'ol',
         null,
         React.createElement(
