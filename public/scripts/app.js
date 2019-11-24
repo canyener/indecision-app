@@ -27,8 +27,6 @@ var onRemoveAll = function onRemoveAll() {
 
 var appRoot = document.getElementById('app');
 
-var numbers = [55, 101, 1000];
-
 var render = function render() {
     var template = React.createElement(
         'div',
