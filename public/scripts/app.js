@@ -80,7 +80,7 @@ var Options = function (_React$Component3) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'p',
+                'div',
                 null,
                 'Options Component here'
             );
@@ -103,7 +103,7 @@ var AddOption = function (_React$Component4) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'p',
+                'div',
                 null,
                 'Add Option Component here'
             );
