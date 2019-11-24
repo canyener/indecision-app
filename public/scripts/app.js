@@ -67,11 +67,59 @@ var Action = function (_React$Component2) {
     return Action;
 }(React.Component);
 
+var Options = function (_React$Component3) {
+    _inherits(Options, _React$Component3);
+
+    function Options() {
+        _classCallCheck(this, Options);
+
+        return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
+    }
+
+    _createClass(Options, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'p',
+                null,
+                'Options Component here'
+            );
+        }
+    }]);
+
+    return Options;
+}(React.Component);
+
+var AddOption = function (_React$Component4) {
+    _inherits(AddOption, _React$Component4);
+
+    function AddOption() {
+        _classCallCheck(this, AddOption);
+
+        return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
+    }
+
+    _createClass(AddOption, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'p',
+                null,
+                'Add Option Component here'
+            );
+        }
+    }]);
+
+    return AddOption;
+}(React.Component);
+
 var jsx = React.createElement(
     'div',
     null,
     React.createElement(Header, null),
-    React.createElement(Action, null)
+    React.createElement(Action, null),
+    React.createElement(Options, null),
+    React.createElement(AddOption, null)
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));
