@@ -20,7 +20,7 @@ var onFormSubmit = function onFormSubmit(e) {
     }
 };
 
-var removeAllOptions = function removeAllOptions() {
+var onRemoveAll = function onRemoveAll() {
     app.options = [];
     render();
 };
@@ -53,7 +53,7 @@ var render = function render() {
         ),
         React.createElement(
             'button',
-            { onClick: removeAllOptions },
+            { onClick: onRemoveAll },
             'Remove All'
         ),
         React.createElement(
