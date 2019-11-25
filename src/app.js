@@ -41,9 +41,13 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+  handleRemoveAll() {
+    alert('Remove All Clicked')
+  }
   render() {
     return (
       <div>
+        <button onClick={this.handleRemoveAll}>Remove All</button>
         {
           this.props.options.map(option => <Option key={option} optionText={option} />)
         }
