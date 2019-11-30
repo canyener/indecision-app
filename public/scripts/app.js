@@ -105,11 +105,6 @@ var Action = function (_React$Component3) {
   }
 
   _createClass(Action, [{
-    key: 'handlePick',
-    value: function handlePick() {
-      alert('Clicked');
-    }
-  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
