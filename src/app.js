@@ -2,7 +2,7 @@ class IndecisionApp extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      options: ['Option One', 'Option Two', 'Option Three']
+      options: ['Option 1', 'Option 2', ' Option 3']
     }
   }
   render() {
@@ -12,7 +12,7 @@ class IndecisionApp extends React.Component {
     return (
       <div>
         <Header title={title} subtitle={subtitle} />
-        <Action />
+        <Action hasOptions={this.state.options.length > 0} />
         <Options options={this.state.options} />
         <AddOption />
       </div>
@@ -39,7 +39,12 @@ class Action extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handlePick}>What should I do?</button>
+        <button 
+          onClick={this.handlePick}
+          disabled={!this.props.hasOptions}
+        >
+          What should I do?
+        </button>
       </div>
     )
   }
