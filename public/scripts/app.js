@@ -44,6 +44,12 @@ var IndecisionApp = function (_React$Component) {
   }, {
     key: 'handleAddOption',
     value: function handleAddOption(option) {
+      if (!option) {
+        return 'Enter valid value to add option';
+      } else if (this.state.options.indexOf(option) > -1) {
+        return 'This option already exists';
+      }
+
       this.setState(function (prevState) {
         return {
           options: prevState.options.concat(option)
