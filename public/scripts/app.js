@@ -36,7 +36,12 @@ var IndecisionApp = function (_React$Component) {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps, prevState) {
       //Fires if component updates. (if state or props values change)
-      console.log('componentDidUpdate');
+
+      //Save data only when array changes
+      if (prevState.options.length !== this.state.options.length) {
+        var json = JSON.stringify(this.state.options);
+        localStorage.setItem('options', json);
+      }
     }
   }, {
     key: 'componentWillUnmount',
