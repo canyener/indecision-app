@@ -9,6 +9,18 @@ class IndecisionApp extends React.Component {
       options: props.options
     }
   }
+  componentDidMount() {
+    //Only in class based components
+    console.log('componentDidMount!')
+  }
+  componentDidUpdate(prevProps, prevState) {
+    //Fires if component updates. (if state or props values change)
+    console.log('componentDidUpdate')
+  }
+  componentWillUnmount() {
+    //Fires right before component goes away
+    console.log('componentWillUnmount')
+  }
   handleDeleteOptions() {
     this.setState(() => ({ options: [] }))
   }
