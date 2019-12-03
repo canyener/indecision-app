@@ -10,8 +10,16 @@ class IndecisionApp extends React.Component {
     }
   }
   componentDidMount() {
-    //Only in class based components
-    console.log('componentDidMount!')
+    try {
+      const json = localStorage.getItem('options')
+      const options = JSON.parse(json)
+  
+      if (options) {
+        this.setState(() => ({ options }))
+      }
+    } catch (e) {
+      //Do nothing at all
+    }
   }
   componentDidUpdate(prevProps, prevState) {
     //Fires if component updates. (if state or props values change)

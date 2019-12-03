@@ -29,8 +29,18 @@ var IndecisionApp = function (_React$Component) {
   _createClass(IndecisionApp, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      //Only in class based components
-      console.log('componentDidMount!');
+      try {
+        var json = localStorage.getItem('options');
+        var options = JSON.parse(json);
+
+        if (options) {
+          this.setState(function () {
+            return { options: options };
+          });
+        }
+      } catch (e) {
+        //Do nothing at all
+      }
     }
   }, {
     key: 'componentDidUpdate',
