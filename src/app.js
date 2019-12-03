@@ -113,6 +113,7 @@ const Action = (props) => {
 const Options = (props) => {
   return (
     <div>
+      {props.options.length === 0 && <p>Please add an option to get started!</p>}
       <button onClick={props.handleDeleteOptions}>Remove All</button>
       {
         props.options.map(option =>  (

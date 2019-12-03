@@ -170,6 +170,11 @@ var Options = function Options(props) {
   return React.createElement(
     'div',
     null,
+    props.options.length === 0 && React.createElement(
+      'p',
+      null,
+      'Please add an option to get started!'
+    ),
     React.createElement(
       'button',
       { onClick: props.handleDeleteOptions },
