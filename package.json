@@ -16,5 +16,8 @@
     "babel-preset-react": "^6.24.1",
     "live-server": "^1.2.1",
     "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
   }
 }
