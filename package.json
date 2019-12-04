@@ -6,7 +6,8 @@
   "author": "canyener <can.yener@hotmail.com.tr>",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public/ --port=3000"
+    "serve": "live-server public/ --port=3000",
+    "build": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch" 
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
