@@ -1,5 +1,7 @@
 console.log('utils.js is running')
 
+const subtract = (a, b) => a - b
+
 const square = x => x * x
 
 const add = (a, b) => a + b
@@ -9,5 +11,6 @@ const add = (a, b) => a + b
 //exports - default export - named exports
 export {
   square,
-  add
+  add,
+  subtract as default
 }
