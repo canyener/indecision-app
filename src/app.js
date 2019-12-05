@@ -1,12 +1,6 @@
-import isSenior, { isAdult, canDrink } from './person'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-console.log('isAdult', isAdult(3))
-console.log('canDrink', canDrink(33))
-console.log('isSenior (default)', isSenior(65))
-// //import './utils.js'
-// import subtractNameIChoose, { square, add } from './utils'
+const template = React.createElement('p', {}, 'testing 123')
 
-// console.log('app.js is running!')
-// console.log('square function from utils.js: ', square(4))
-// console.log('add function from utils.js: ', add(100, 23))
-// console.log('subract (default) function from utils.js: ', subtractNameIChoose(100, 23))
+ReactDOM.render(template, document.getElementById('app'))
