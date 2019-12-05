@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import AddOption from './components/AddOption'
+
 class IndecisionApp extends React.Component {
   constructor(props) {
     super(props)
@@ -141,7 +143,5 @@ const Option = (props) => {
     </div>
   )
 }
-
-
 
 ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
