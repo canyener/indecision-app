@@ -1,13 +1,13 @@
 .header {
   background: $off-black;
   color: white;
-  margin-bottom: 4.8rem;
+  margin-bottom: $xl-size;
   padding: $m-size 0;
 }
 
 //BEM naming convention - Block Element Modifier
 .header__title {
-  font-size: 3.2rem;
+  font-size: $l-size;
   margin: 0;
 }
 
