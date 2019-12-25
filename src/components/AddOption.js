@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default class AddOption extends React.Component {
+export default class AddOption extends Component {
   state = {
     error: undefined
   }
