@@ -10,18 +10,33 @@ Add react cdn and app.js script to index.html
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 <script src="/scripts/app.js"></script>
 ```
+## With global modules (I strongly recommend you should avoid global modules)
 
 Install live-server globally with ```yarn add global live-server``` or ```npm install -g live-server```
 
 Install babel-cli globally with ```yarn add global babel-cli``` or ```npm install -g babel-cli```
 
-Run this or add this as a script to compile 
+Run this command as a script to compile 
 
 ```babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch```
 
-Run this add this as a script to start web server 
+Run this command to start web server 
 
 ```live-server public```
+
+## Without global modules (Yay!)
+
+ Install live-server by running ```yarn add live-server```
+ 
+ Install babel-cli by running ```yarn add babel-cli```
+ 
+ Add script for compiling,
+ 
+ example script: ```"babel-compile": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"```
+ 
+ Add script to start web server
+ 
+ example script: ```live-server public/ --port=<port-number-you-choose>``` 
 
 # When using webpack
 
