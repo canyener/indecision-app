@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=canyener_indecision-app&metric=alert_status)](https://sonarcloud.io/dashboard?id=canyener_indecision-app)
+
 # indecision-app
 Add your options, let the computer guide you!
 
