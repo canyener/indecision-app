@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Action component correctly 1`] = `
+<div>
+  <button
+    className="big-button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    What should I do?
+  </button>
+</div>
+`;
