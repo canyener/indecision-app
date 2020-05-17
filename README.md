@@ -1,3 +1,4 @@
+![CI](https://github.com/canyener/indecision-app/workflows/CI/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=canyener_indecision-app&metric=alert_status)](https://sonarcloud.io/dashboard?id=canyener_indecision-app)
 
 # indecision-app
