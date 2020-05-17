@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Header correctly with subtitle 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="container"
+  >
+    <h1
+      className="header__title"
+    >
+      Indecision
+    </h1>
+    <h2
+      className="header__subtitle"
+    >
+      test subtitle
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Should render Header correctly without subtitle 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="container"
+  >
+    <h1
+      className="header__title"
+    >
+      Indecision
+    </h1>
+  </div>
+</div>
+`;

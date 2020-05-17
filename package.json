@@ -8,7 +8,8 @@
   "scripts": {
     "serve": "live-server public/ --port=3000",
     "build": "webpack --mode development",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
@@ -27,6 +28,10 @@
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^26.0.1",
+    "jest-enzyme": "^7.1.2",
     "webpack-cli": "^3.3.11"
   }
 }
