@@ -24,7 +24,7 @@
     "react-modal": "^3.11.2",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
-    "webpack": "^5.4.0",
+    "webpack": "^5.5.0",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
