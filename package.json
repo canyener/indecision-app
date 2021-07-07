@@ -23,7 +23,7 @@
     "react-dom": "^16.14.0",
     "react-modal": "^3.14.2",
     "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
+    "style-loader": "^3.0.0",
     "webpack": "^5.36.2",
     "webpack-dev-server": "^3.11.2"
   },
